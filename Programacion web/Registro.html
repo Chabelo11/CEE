@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!--Misma barra de navegacion para todas las paguinas -->
+    <nav>
+        <div class="nav-bar">
+            <span class="logo"><a href="#">CEE</a></span>
+            <!--Creamos la estructura de la barra de navegacion -->
+            <div class="menu">
+                <ul class="nav-links">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="#">Registro</a></li>
+                    <li><a href="sms.html">Quienes Somos?</a></li>
+                    <li><a href="catalogo.html">Catalago</a></li>
+                    <li><a href="carrito.html">Carrito de compras</a></li>
+                    <li><a href="finbu.html">Busqueda de productos</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main class="registro-main">
+    <div class="card">
+      <h2>Crea tu cuenta</h2>
+
+      <form id="registroForm" novalidate>
+
+        <div class="field" id="field-nombre">
+          <label for="nombre">Nombre completo</label>
+          <input type="text" id="nombre" name="nombre" placeholder="Ej. Ana García"
+            minlength="3" maxlength="80" required />
+          <span class="error-msg">Ingresa tu nombre (mínimo 3 caracteres).</span>
+        </div>
+
+        <div class="field" id="field-email">
+          <label for="email">Correo electrónico</label>
+          <input type="email" id="email" name="email" placeholder="correo@ejemplo.com"
+            pattern="^[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$" required />
+          <span class="error-msg">Ingresa un correo electrónico válido.</span>
+        </div>
+
+        <div class="field" id="field-password">
+          <label for="password">Contraseña</label>
+          <input type="password" id="password" name="password" placeholder="••••••••"
+            minlength="8" maxlength="64" required />
+          <p class="hint">Mínimo 8 caracteres.</p>
+          <span class="error-msg">La contraseña debe tener al menos 8 caracteres.</span>
+        </div>
+
+        <div class="field" id="field-fecha">
+            <label for="fecha">Fecha de nacimiento</label>
+            <input type="date" id="fecha" name="fecha" min="1920-01-01" required />
+            <span class="error-msg">Ingresa una fecha válida.</span>
+        </div>
+
+        <div class="field" id="field-telefono">
+            <label for="telefono">Teléfono</label>
+            <input type="tel" id="telefono" name="telefono" placeholder="8116197218"
+            pattern="^[+]?[\d\s\-().]{7,20}$" minlength="7" maxlength="20" required />
+            <span class="error-msg">Ingresa un número de teléfono válido.</span>
+        </div>
+
+        <div class="check-field">
+            <input type="checkbox" id="terminos" name="terminos" />
+            <label for="terminos">Acepto los términos y condiciones</label>
+        </div>
+
+        <button type="submit" class="btn" id="submitBtn" disabled>
+            Registrarse
+        </button>
+
+        </form>
+    </div>
+    </main>
+
+    <div id="toast">✓ ¡Cuenta creada exitosamente!</div>
+
+<script src="script.js"></script>
+</body>
+</html>

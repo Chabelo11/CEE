@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Carrito - CEE</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Carrito de Compra</h1>
+</header>
+
+    <nav>
+        <div class="nav-bar">
+            <span class="logo"><a href="">CEE</a></span>
+            <!--Creamos la estructura de la barra de navegacion -->
+            <div class="menu">
+                <ul class="nav-links">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="Registro.html">Registro</a></li>
+                    <li><a href="sms.html">Quienes Somos?</a></li>
+                    <li><a href="catalogo.html">Catalago</a></li>
+                    <li><a href="#">Carrito de compras</a></li>
+                    <li><a href="finbu.html">Busqueda de productos</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+<main>
+    <h2>Productos en tu carrito</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Producto</th>
+                <th>Precio</th>
+            </tr>
+        </thead>
+        <tbody id="listaCarrito">
+        </tbody>
+    </table>
+
+    <h3 id="total">Total: $0 MXN</h3>
+
+    <button onclick="vaciarCarrito()">Vaciar carrito</button>
+
+</main>
+
+<footer>
+    <p>© 2026 CEE</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
