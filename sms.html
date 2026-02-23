@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Quiénes Somos | CEE</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<header>
+    <h1> CEE </h1>
+</header>
+
+    <nav>
+        <div class="nav-bar">
+            <span class="logo"><a href="">CEE</a></span>
+            <!--Creamos la estructura de la barra de navegacion -->
+            <div class="menu">
+                <ul class="nav-links">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="Registro.html">Registro</a></li>
+                    <li><a href="#">Quienes Somos?</a></li>
+                    <li><a href="catalogo.html">Catalago</a></li>
+                    <li><a href="carrito.html">Carrito de compras</a></li>
+                    <li><a href="finbu.html">Busqueda de productos</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+<header>
+    <h1>Quiénes Somos</h1>
+</header>
+
+<section>
+    <h2>Sobre la empresa</h2>
+    <p>
+        CEE es una empresa dedicada a la comercialización de productos electrónicos,
+        línea blanca y servicios relacionados, enfocada en brindar soluciones
+        accesibles y de calidad a sus clientes. Nuestro objetivo es satisfacer
+        las necesidades del mercado mediante un servicio confiable y eficiente.
+    </p>
+
+    <h2>Nuestro equipo</h2>
+    <table>
+        <tr>
+            <th>Nombre</th>
+            <th>Rol</th>
+            <th>Correo</th>
+        </tr>
+        <tr>
+            <td>Erick Morales Montufar</td>
+            <td>Gerente General</td>
+            <td>Montufar142@gmail.com</td>
+        </tr>
+        <tr>
+            <td>Jesus Everardo Lopez Molina</td>
+            <td>Ventas</td>
+            <td>Everardo26@gmail.com</td>
+        </tr>
+        <tr>
+            <td>Alejandro Domínguez Pérez</td>
+            <td>Soporte Técnico</td>
+            <td>Alejandro08@gmail.com</td>
+        </tr>
+    </table>
+
+    <h2>Misión, Visión y Valores</h2>
+    <ul>
+        <li><strong>Misión:</strong> Ofrecer productos y servicios accesibles que mejoren la calidad de vida de nuestros clientes.</li>
+        <li><strong>Visión:</strong> Consolidarnos como una empresa líder y confiable en el sector comercial.</li>
+        <li><strong>Valores:</strong> Honestidad, seguridad, compromiso, responsabilidad y atención al cliente.</li>
+    </ul>
+
+    <button onclick="verMas()">Ver más</button>
+
+    <div id="infoExtra">
+        <p>
+            En CEE trabajamos con enfoque en la mejora continua, innovación y
+            responsabilidad social, buscando generar confianza y relaciones
+            duraderas con nuestros clientes y colaboradores.
+        </p>
+    </div>
+</section>
+
+<script>
+    function verMas() {
+        const info = document.getElementById("infoExtra");
+        info.style.display = info.style.display === "none" ? "block" : "none";
+    }
+</script>
+
+<script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+    <title>Búsqueda de Productos | CEE</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<header>
+    <h1> CEE </h1>
+</header>
+
+    <nav>
+        <div class="nav-bar">
+            <span class="logo"><a href="">CEE</a></span>
+            <!--Creamos la estructura de la barra de navegacion -->
+            <div class="menu">
+                <ul class="nav-links">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="Registro.html">Registro</a></li>
+                    <li><a href="sms.html">Quienes Somos?</a></li>
+                    <li><a href="catalogo.html">Catalago</a></li>
+                    <li><a href="carrito.html">Carrito de compras</a></li>
+                    <li><a href="#">Busqueda de productos</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+<h2>Búsqueda de productos electrónicos</h2>
+
+<input 
+    type="text" 
+    id="textoBusqueda" 
+    placeholder="Buscar producto..."
+    onkeyup="buscarProducto()"
+>
+
+<p id="resultados"></p>
+
+<!-- PRODUCTOS -->
+<div class="contenedor">
+
+    <div class="producto" data-nombre="laptop gamer">
+        <img src="img/laptop.jpg">
+        <h3>Laptop Gamer</h3>
+        <p class="precio">$18,000 MXN</p>
+        <button class="boton" onclick="agregarAlCarrito('Laptop Gamer', '18,000 MXN')">Agregar al carrito</button>
+    </div>
+
+    <div class="producto" data-nombre="samsung galaxy">
+        <img src="img/telefono.jpg">
+        <h3>Samsung Galaxy</h3>
+        <p class="precio">$8,000 MXN</p>
+        <button class="boton" onclick="agregarAlCarrito('Samsung Galaxy', '8,000 MXN')">Agregar al carrito</button>
+    </div>
+
+    <div class="producto" data-nombre="ipad">
+        <img src="img/Ipad.jpg">
+        <h3>iPad</h3>
+        <p class="precio">$5,200 MXN</p>
+        <button class="boton" onclick="agregarAlCarrito('iPad', '5,200 MXN')">Agregar al carrito</button>
+    </div>
+
+    <div class="producto" data-nombre="pc gamer">
+        <img src="img/PC.jpg">
+        <h3>PC Gamer</h3>
+        <p class="precio">$15,200 MXN</p>
+        <button class="boton" onclick="agregarAlCarrito('PC Gamer', '15,200 MXN')"> Agregar al carrito</button>
+    </div>
+
+    <div class="producto" data-nombre="audifonos gamer">
+        <img src="img/audifonos.jpg">
+        <h3>Audífonos Gamer</h3>
+        <p class="precio">$1,200 MXN</p>
+        <button class="boton" onclick="agregarAlCarrito('Audífonos Gamer', '1,200 MXN')"> Agregar al carrito</button>
+    </div>
+
+</div>
+
+<script>
+function buscarProducto(){
+    const texto = document.getElementById("textoBusqueda").value.toLowerCase();
+    const productos = document.querySelectorAll(".producto");
+    const resultados = document.getElementById("resultados");
+
+    let encontrado = false;
+
+    productos.forEach(producto => {
+        const nombre = producto.dataset.nombre;
+
+        if(texto !== "" && nombre.includes(texto) && !encontrado){
+            producto.style.display = "block";
+            encontrado = true;
+        } else {
+            producto.style.display = "none";
+        }
+    });
+
+    if(texto === ""){
+        resultados.textContent = "";
+    } else if(encontrado){
+        resultados.textContent = `Resultados para la búsqueda de ${texto}`;
+    } else {
+        resultados.textContent = "No se encontraron resultados";
+    }
+}
+
+</script>
+<footer>
+    <p>© 2026 CEE</p>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
